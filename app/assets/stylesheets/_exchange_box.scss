@@ -1,5 +1,8 @@
 .exchange_box{
- 
+    .hidden {
+      display: none;
+    }
+
     .card{
       border: 0;
    
@@ -20,8 +23,8 @@
         }
    
         .btn-exchange{
-          background-color: #5bc0de;
-          border-color: #5bc0de;
+          background-color: #303030;
+          border-color: #000000;
           border-radius: 0;
         }
       }

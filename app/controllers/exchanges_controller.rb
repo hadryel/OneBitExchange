@@ -1,9 +1,10 @@
 class ExchangesController < ApplicationController
   def index
+    @ratio = ExchangeService.new(params[:source_currency], params[:target_currency]).perform
   end
 
   def convert
-    value = ExchangeService.new(params[:source_currency], params[:target_currency], params[:amount]).perform
-    render json: {"value": value}
+    ratio = ExchangeService.new(params[:source_currency], params[:target_currency]).perform
+    render json: {"ratio": ratio}
   end
 end
